@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 100vh;
+    background: linear-gradient(
+        to left,
+        rgb(65, 64, 64), rgb(129, 129, 129)
+    );
+}
+
+.rotating-border {
+    border-radius: 50%;
+    padding: 8px;
+    z-index: 1;
+    transition: all .5s ease-in-out; 
+    position: relative;
+    background: rgba(39, 38, 38, 0.185);
+    display: flex;
+    place-items: center;
+}
+.rotating-border:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    left: 0; 
+    border: 3px inset rgb(255, 255, 255);
+    border-style: dotted solid dashed double;
+    border-width: 3px;
+    width: 100%;
+    height: 100%;
+    animation: rotatingBorder 5s linear infinite;
+}
+
+
+
+
+.rotating-border img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    transform: scale(.9);
+    z-index: 44;
+    transition: all .5s ease-in-out;
+}
+.rotating-border:hover img{
+    transform: scale(1);
+}
+
+@keyframes rotatingBorder {
+    from {
+        transform: translate(-2px, -2px) rotate(0deg);
+    }
+    to {
+        transform: translate(-2px , -2px) rotate(360deg);
+    }
+}

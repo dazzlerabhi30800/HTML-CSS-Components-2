@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width : 100%;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(
+        to top,
+        rgb(247, 85, 179) 10%,
+        rgb(248, 115, 204) 30%,
+        rgb(250, 92, 250) 50%
+    );
+}
+
+button {
+    position: relative;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 15px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all .5s linear;
+    background: rgb(253, 80, 123);
+    /* box-shadow: 
+    1px 1px 3px 5px rgba(240, 29, 29, 0.11),
+        1px 2px 3px 5px rgba(243, 57, 57, 0.068),
+        1px 1px 3px 6px rgba(253, 98, 157, 0.062)
+        ; */
+    box-shadow: 0px 10px 15px 0.1px rgba(8, 8, 8, 0.123);
+    transform: translate(0px, 0px);
+    text-transform: uppercase;
+}
+button:before{
+    position: absolute;
+    content: attr(data-attr);
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    background: rgb(241, 62, 131);
+    transition: all .5s linear;
+    transform: rotateX(90deg) translateY(-50%);
+    transform-origin: top;
+    padding: 15px;
+}
+button:hover:before {
+    transform: rotateX(0deg) translateY(0%);
+}
+
+button:after {
+    position: absolute;
+    content: attr(data-attr);
+    background: rgb(243, 90, 184);
+    top: 0;
+    left: 0;
+    padding: 15px;
+    border-radius: 10px;
+    transform: rotateX(0deg) translateY(0%);
+    transform-origin: bottom;
+    transition: all .5s linear;
+}
+button:hover:after {
+    transform: rotateX(90deg) translateY(50%);
+}
+
+
+
+
+button:active {
+    transform: translate(10px,30px);
+}
+
+
+
+

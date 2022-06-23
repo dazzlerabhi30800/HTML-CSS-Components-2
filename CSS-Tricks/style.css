@@ -1,0 +1,53 @@
+
+
+/* body {
+    background: url(https://images.unsplash.com/photo-1653422064161-a2e82924adbc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80);
+    background-repeat: no-repeat;
+    height : 100vh;
+    background-size: cover;
+    background-color: rgb(125, 6, 136);
+    background-blend-mode: screen;
+} */
+
+
+body {
+    background : rgb(34, 33, 33);
+}
+
+
+body > #bg {
+    width : 100%;
+    height: 100%;
+    position: absolute;
+    clip-path: polygon(53% 12%, 100% 1%, 100% 66%, 0 83%, 0 23%);
+    z-index: -1;
+    animation: blink 10s infinite;
+}
+
+
+@keyframes blink {
+    0%{
+        background : blue;
+    }
+    15% {
+        background : violet;
+    }
+    30% {
+        background : red;
+    }
+    45% {
+        background : purple;
+    }
+    60% {
+        background : lightblue;
+    }
+    75% {
+        background: peachpuff;
+    }
+    90% {
+        background: lightcoral
+    }
+    100% {
+        background : pink;
+    }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Useful CSS Tricks</title>
+</head>
+<body>
+    <main>
+        <div class="hero--wrapper">
+            <div class="text--wrapper">
+                <h1 class="heading">3 Useful CSS hacks</h1>
+                <p>This code is written on June 23 2022</p>
+            </div>
+        </div>
+
+        <div class="first--section">
+            <div class="border">
+                <h2>Using <span>100vax</span> with <span>border-radius</span></h2>
+                <p>If you've entered needed a pill shaped button, this will work every single line.</p>
+                <button class="btn">Click Me!</button>
+            </div>
+            <div class="box-style">
+                <h3>Using <span>100vmax</span> with <span>box-shadow</span> for easy overlays</h3>
+                <p>
+                    With the rise of <span>&lt;dialog&gt;</span> and <span>::backdrop</span>, this isn't as useful as it used to be, but it can still come in handy.
+                </p>
+                <button class="open">Open</button>
+            </div>
+        </div>
+        <div class="overlay--container">
+            <h4>Sign up for my newsletter</h4>
+            <p>It's really good!</p>
+            <button>No thanks</button>
+        </div>
+
+        <div class="last--section full-width">
+            <heading>
+                Escaping outside of a container
+            </heading>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+    </main>
+    
+</body>
+<script>
+    const openBtn = document.querySelector('.open');
+    const overlayContainer = document.querySelector('.overlay--container');
+    const noThanks = document.querySelector('.overlay--container button')
+    // openBtn.addEventListener('click', () => {
+    //     overlayContainer.setAttribute('open', 'open');
+    // })
+    noThanks.addEventListener('click', () => {
+        overlayContainer.removeAttribute('open');
+    })
+
+</script>
+
+</html>

@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sedgwick Ave', cursive;
+}
+
+body {
+    height: 100vh;
+    background-image: url(./1597772.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar {
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    padding: 15px 2rem;
+}
+
+.menu-btn {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    transition: all .5s linear;
+}
+
+.line {
+    background: linear-gradient(to left,
+            rgb(255, 255, 255), rgb(255, 255, 255));
+    height: 2px;
+    width: 20px;
+    transition: all .2s linear;
+    position: relative;
+    z-index: 55;
+    cursor: pointer;
+}
+
+.menu-btn.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(1px, 1px);
+}
+
+.menu-btn.active .line:nth-child(2) {
+    display: none;
+}
+
+.menu-btn.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(4px, -4px)
+}
+
+.nav--list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    position: absolute;
+    background: rgba(219, 200, 33, 0.021);
+    padding: 1rem 10px;
+    width: 30vw;
+    height: 80vh;
+    top: 3rem;
+    left: 0;
+    transform: translateX(-500px);
+    transition: transform .4s ease-in-out;
+    /* transition-timing-function: cubic-bezier(.1, 0.1, .5, 0.1); */
+}
+
+.nav--list.show {
+    transform: translateX(0px);
+}
+
+.list--item:nth-child(1) {
+    background: yellow;
+    display: flex;
+    color: black;
+    width: inherit;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem
+}
+
+.list--item:nth-child(2) {
+    background: rgb(253, 151, 68);
+    display: flex;
+    color: black;
+    width: 380px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.list--item:nth-child(3) {
+    background: rgb(122, 142, 255);
+    width: 450px;
+    color: black;
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.list--item {
+    cursor: pointer;
+    color: white;
+    transition: all .3s linear;
+    font-weight: bold;
+    margin: 0px 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.233);
+    transform: scale(1);
+}
+
+.list--item:hover {
+    transform: scale(1.2);
+}
+
+
+
+
+.quote {
+    color: rgb(255, 255, 255);
+    position: relative;
+    top: 25%;
+    background: rgba(66, 66, 66, 0.171);
+    padding: 2rem 10px;
+    font-size: 3rem;
+    max-width: 700px;
+    margin: 10px auto;
+    font-weight: bolder;
+    text-align: center;
+    backdrop-filter: blur(2px);
+    letter-spacing: 2px;
+    border-radius: 5px;
+    border: 3px solid rgb(136, 133, 133);
+    animation: move 1s linear infinite alternate-reverse;
+}
+
+.heading span {
+    color: rgb(255, 72, 0);
+}
+
+@keyframes move {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+       transform: scale(1.1); 
+    }
+}
